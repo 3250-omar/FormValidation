@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Bai+Jamjuree:wght@500&family=Barlow+Semi+Condensed&family=Belanosima&family=Hanken+Grotesk:wght@300&family=Indie+Flower&family=Montserrat&family=Outfit&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,400;0,700;1,400;1,800&family=Raleway:wght@400;700&family=Roboto:wght@400;700&family=Rubik:wght@500&family=Ubuntu:wght@400;500&family=Vina+Sans&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
+  background-color: var(--Charcoal-Grey);
+  font-family: 'Roboto', sans-serif;
 
-.App-link {
-  color: #61dafb;
 }
+.form{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  background-color: var(--White);
+  padding: 1rem;
+  border-radius: 20px;
+}
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.PhotoSection img {
+  height: 500px;
+}
+.inputSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 375px;
+  padding-left: 1rem;
+}
+p , label {
+  font-size: 16px;
+}
+.email{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.email label {
+  font-size: 12px;
+  font-weight: bold;
+}
+input , .input{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: .25px solid var(--Grey);
+  cursor: pointer;
+}
+.error {
+  color: var(--Tomato);
+  border: .25px solid var(--Tomato);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+li{
+  display: flex;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+button{
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  border: none;
+  transition: all .3s;
+
+}
+button:hover{
+  transform: translateY(5px);
+  background-color: var(--Tomato);
+  box-shadow: 0px 100px 132px 0px var(--Tomato);
+}
+.Thanks{
+  width: 425px;
+  background-color: var(--White);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  gap: 2rem;
+}
+.Thanks h1 {
+  font-size: 2.5rem;
+  width: 350px;
+}
+.Thanks img{
+  width: 3rem;
+  height: 3rem;
+}
+.Thanks button{
+  margin-bottom: 1rem;
+}
+.Emailerror{
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--Tomato);
+}
+.footer{
+  width: 100%;
+  display: grid;
+  place-content: center;
+  height: 200px;
+  background-color: var(--Charcoal-Grey);
+}
+.footer a:any-link{
+  color: var(--Tomato);
+  transition: all .3s;
+}
+.footer a:any-link:hover {
+  transform: scale(1.2);
 }
